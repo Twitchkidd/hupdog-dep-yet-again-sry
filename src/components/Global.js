@@ -3,43 +3,133 @@ import { above } from 'utils/breakpoints.js';
 
 const Global = createGlobalStyle`
   :root {
-    --blue-300: #35357C;
-    --blue-400: #1C1C61;
-    --blue-500: #0B0B45;
-    --blue-600: #04042C;
-    --blue-700: #010115;
-    --blue: var(--blue-500);
+    --green-tint-100: #229029;
+    --green-tint-200: #2ab233;
+    --green-tint-300: #36d040;
+    --green-tint-400: #57d860;
+    --green-tint-500: #79e080;
+    --green-tint-600: #9ae79f;
+    --green-tint-700: #bcefbf;
+    --green-tint-800: #ddf7df;
+    --green-tint-900: #ffffff;
 
-    --red-300: #C53333;
-    --red-400: #A21616;
-    --red-500: #800000;
-    --red-600: #5A0000;
-    --red-700: #330000;
-    --red: var(--red-500);
+    --green-tone-100: #229029;
+    --green-tone-200: #2e8e34;
+    --green-tone-300: #3a8c3f;
+    --green-tone-400: #458a4a;
+    --green-tone-500: #518855;
+    --green-tone-600: #5d865f;
+    --green-tone-700: #69846a;
+    --green-tone-800: #748275;
+    --green-tone-900: #808080;
 
-    --green-300: #299D29;
-    --green-400: #128112;
-    --green-500: #006600;
-    --green-600: #004800;
-    --green-700: #002800;
-    --green: var(--green-500);
+    --green-shade-100: #229029;
+    --green-shade-200: #1e7f24;
+    --green-shade-300: #196c1f;
+    --green-shade-400: #155a1a;
+    --green-shade-500: #114815;
+    --green-shade-600: #0d360f;
+    --green-shade-700: #08240a;
+    --green-shade-800: #041205;
+    --green-shade-900: #000000;
 
-    --light-blue: #7ACBF5;
-    --pink: #EAACB8;
+    --blue-tint-100: #6bfecf;
+    --blue-tint-200: #7efed6;
+    --blue-tint-300: #91fedc;
+    --blue-tint-400: #a3ffe2;
+    --blue-tint-500: #b5ffe7;
+    --blue-tint-600: #c8ffed;
+    --blue-tint-700: #dafff3;
+    --blue-tint-800: #edfff9;
+    --blue-tint-900: #ffffff;
 
-    --beige-300: #FFFEFC;
-    --beige-400: #FFF9F0;
-    --beige-500: #E8DCCA;
-    --beige-600: #C5B399;
-    --beige-700: #A68F6D;
-    --beige: var(--beige-500);
+    --blue-tone-100: #6bfecf;
+    --blue-tone-200: #6eeec5;
+    --blue-tone-300: #70dfbb;
+    --blue-tone-400: #73cfb1;
+    --blue-tone-500: #76bfa8;
+    --blue-tone-600: #78af9e;
+    --blue-tone-700: #7ba094;
+    --blue-tone-800: #7d908a;
+    --blue-tone-900: #808080;
 
-    --white: #FFFFFF;
-    --gray-300: #EAEBEC;
-    --gray-500: #C2C7CC;
-    --gray-700: #929DA9;
-    --black: #000000;
-    --gray: var(--gray-500);
+    --blue-shade-100: #6bfecf;
+    --blue-shade-200: #3ffec1;
+    --blue-shade-300: #12feb3;
+    --blue-shade-400: #01e19a;
+    --blue-shade-500: #01b47b;
+    --blue-shade-600: #01875d;
+    --blue-shade-700: #005a3e;
+    --blue-shade-800: #002d1f;
+    --blue-shade-900: #000000;
+
+    --pink-tint-100: #fe6b99;
+    --pink-tint-200: #fe7ea7;
+    --pink-tint-300: #fe91b3;
+    --pink-tint-400: #ffa3c0;
+    --pink-tint-500: #ffb5cd;
+    --pink-tint-600: #ffc8d9;
+    --pink-tint-700: #ffdae6;
+    --pink-tint-800: #ffedf2;
+    --pink-tint-900: #ffffff;
+
+    --pink-tone-100: #fe6b99;
+    --pink-tone-200: #ee6e96;
+    --pink-tone-300: #df7093;
+    --pink-tone-400: #cf7390;
+    --pink-tone-500: #bf768d;
+    --pink-tone-600: #af7889;
+    --pink-tone-700: #a07b86;
+    --pink-tone-800: #907d83;
+    --pink-tone-900: #808080;
+
+    --pink-shade-100: #fe6b99;
+    --pink-shade-200: #fe3f7b;
+    --pink-shade-300: #fe125d;
+    --pink-shade-400: #e10148;
+    --pink-shade-500: #b4013a;
+    --pink-shade-600: #87012b;
+    --pink-shade-700: #5a001d;
+    --pink-shade-800: #2d000e;
+    --pink-shade-900: #000000;
+
+    --purple-tint-100: #902289;
+    --purple-tint-200: #b22aa9;
+    --purple-tint-300: #d036c5;
+    --purple-tint-400: #d857cf;
+    --purple-tint-500: #e079d9;
+    --purple-tint-600: #e79ae2;
+    --purple-tint-700: #efbcec;
+    --purple-tint-800: #f7ddf5;
+    --purple-tint-900: #ffffff;
+
+    --purple-tone-100: #902289;
+    --purple-tone-200: #8e2e88;
+    --purple-tone-300: #8c3a87;
+    --purple-tone-400: #8a4586;
+    --purple-tone-500: #885185;
+    --purple-tone-600: #865d83;
+    --purple-tone-700: #846982;
+    --purple-tone-800: #827481;
+    --purple-tone-900: #808080;
+
+    --purple-shade-100: #902289;
+    --purple-shade-200: #7f1e78;
+    --purple-shade-300: #6c1967;
+    --purple-shade-400: #5a1556;
+    --purple-shade-500: #481145;
+    --purple-shade-600: #360d33;
+    --purple-shade-700: #240822;
+    --purple-shade-800: #120411;
+    --purple-shade-900: #000000;
+
+    --green: var(--green-tint-100);
+    --blue: var(--blue-tint-100);
+    --pink: var(--pink-tint-100);
+    --purple: var(--purple-tint-100);
+    --white: var(--green-tint-900);
+    --gray: var(--green-tone-900);
+    --black: var(--green-shade-900);
 
     --serif: 'Noto Serif', serif;
     --sans: 'Noto Sans', sans-serif;
