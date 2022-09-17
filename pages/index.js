@@ -9,23 +9,16 @@ export default function Home() {
 				<meta name='description' content='' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<Button>
-				<strong>Button!</strong>
+			<h1>HupDog</h1>
+			<Button green>
+				<strong>Running</strong>
 			</Button>
-			{/* <h1>Header 1</h1>
-			<h2>Header 2</h2>
-			<h3>Header 3</h3>
-			<h4>Header 4</h4>
-			<h5>Header 5</h5>
-			<h6>Header 6</h6>
-			<p>Paragraph tag.</p>
-			<ul>
-				<li>List item</li>
-				<li>List item</li>
-				<li>List item</li>
-				<li>List item</li>
-				<li>List item</li>
-			</ul> */}
+			<Button blue>Coding</Button>
+			<Button pink>Coffee</Button>
+			<Button purple>
+				<strong>Dog</strong>
+			</Button>
+			<Button>Some Button</Button>
 		</div>
 	);
 }

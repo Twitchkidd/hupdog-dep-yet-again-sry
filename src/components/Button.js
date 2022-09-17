@@ -5,30 +5,73 @@ const Button = styled.button`
 	min-width: 66vw;
 	padding: 2rem;
 	border: none;
-	background-color: var(--green);
+	background-color: ${props =>
+		props.green
+			? 'var(--green)'
+			: props.blue
+			? 'var(--blue)'
+			: props.pink
+			? 'var(--pink)'
+			: props.purple
+			? 'var(--purple)'
+			: 'transparent'};
 
-	color: var(--white);
+	color: ${props =>
+		props.green || props.purple ? 'var(--white)' : 'var(--black)'};
 	font-size: 2rem;
 
 	border-radius: 4rem;
 
 	&:hover {
-		background-color: var(--green-600);
+		background-color: ${props =>
+			props.green
+				? 'var(--green-shade-400)'
+				: props.blue
+				? 'var(--blue-shade-400)'
+				: props.pink
+				? 'var(--pink-shade-400)'
+				: props.purple
+				? 'var(--purple-shade-400)'
+				: 'var(--gray)'};
 
-		transition: 0.7s;
+		transition: 0.4s;
 	}
 
 	&:focus {
 		outline-color: transparent;
 		outline-style: solid;
 
-		transition: 0.7s;
+		transition: 0.2s;
 
-		box-shadow: 0 0 0 4px var(--green-400);
+		box-shadow: 0 0 0 4px
+			${props =>
+				props.green
+					? 'var(--green-tint-400)'
+					: props.blue
+					? 'var(--blue-tint-400)'
+					: props.pink
+					? 'var(--pink-tint-400)'
+					: props.purple
+					? 'var(--purple-tint-400)'
+					: 'var(--blue-tint-400)'};
 	}
 
 	&:active {
-		background-color: var(--green-700);
+		background-color: ${props =>
+			props.green
+				? 'var(--green-shade-600)'
+				: props.blue
+				? 'var(--blue-shade-600)'
+				: props.pink
+				? 'var(--pink-shade-600)'
+				: props.purple
+				? 'var(--purple-shade-600)'
+				: 'var(--black)'};
+
+		${props =>
+			props.green || props.blue || props.pink || props.purple
+				? null
+				: 'color: var(--white);'}
 
 		scale: 1.1;
 		transition: 0.2s;
