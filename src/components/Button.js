@@ -4,7 +4,10 @@ const Button = styled.button`
 	min-height: 2rem;
 	min-width: 66vw;
 	padding: 2rem;
-	border: none;
+	border: ${props =>
+		props.green || props.blue || props.pink || props.purple
+			? 'none'
+			: '4px solid var(--black)'};
 	background-color: ${props =>
 		props.green
 			? 'var(--green)'
@@ -61,21 +64,22 @@ const Button = styled.button`
 			props.green
 				? 'var(--green-shade-600)'
 				: props.blue
-				? 'var(--blue-shade-600)'
+				? 'var(--blue-shade-700)'
 				: props.pink
 				? 'var(--pink-shade-600)'
 				: props.purple
 				? 'var(--purple-shade-600)'
 				: 'var(--black)'};
 
-		${props =>
-			props.green || props.blue || props.pink || props.purple
-				? null
-				: 'color: var(--white);'}
+		${props => (props.green || props.purple ? null : 'color: var(--white);')}
 
 		scale: 1.1;
 		transition: 0.2s;
 	}
 `;
 
-export default ({ children }) => <Button type='button'>{children}</Button>;
+export default ({ children, ...rest }) => (
+	<Button type='button' {...rest}>
+		{children}
+	</Button>
+);
