@@ -124,8 +124,11 @@ const Global = createGlobalStyle`
     --purple-shade-900: #000000;
 
     --green: var(--green-tint-100);
+    /* green hsl(124, 62%, 35%) */
     --blue: var(--blue-tint-100);
+    /* blue hsl(161, 99%, 71%) */
     --pink: var(--pink-tint-100);
+    /* pink hsl(341, 99%, 71%) */
     --purple: var(--purple-tint-100);
     --white: var(--green-tint-900);
     --gray: var(--green-tone-900);
@@ -197,7 +200,7 @@ const Global = createGlobalStyle`
 
   html, body {
     overflow: hidden;
-    background-color: hsl(240 18% 90%);
+    background-color: hsl(124 62% 5%);
   }
 
   /* https://csswizardry.com/2012/06/single-direction-margin-declarations/ */

@@ -3,7 +3,10 @@ import styled from 'styled-components';
 const Panel = styled.div`
 	position: absolute;
 	inset: 0;
-	z-index: ${props => props.z + 1};
+	z-index: ${props => props.z + 2};
+
+	display: grid;
+	place-items: center;
 
 	height: 100vh;
 	width: 100vw;
