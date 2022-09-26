@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Button = styled.button`
+const ButtonEl = styled.button`
 	min-height: 2rem;
 	min-width: 66vw;
 	padding: 2rem;
@@ -78,8 +78,10 @@ const Button = styled.button`
 	}
 `;
 
-export default ({ children, ...rest }) => (
-	<Button type='button' {...rest}>
+const Button = ({ children, ...rest }) => (
+	<ButtonEl type='button' {...rest}>
 		{children}
-	</Button>
+	</ButtonEl>
 );
+
+export default Button;
