@@ -1,24 +1,25 @@
 {
-  "name": "hupdog",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "babel-plugin-module-resolver": "^4.1.0",
-    "next": "12.2.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "styled-components": "^5.3.5"
-  },
-  "devDependencies": {
-    "babel-plugin-styled-components": "^2.0.7",
-    "eslint": "8.23.0",
-    "eslint-config-next": "12.2.5",
-    "pm2": "^5.2.0"
-  }
+	"name": "hupdog",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"deploy": "pm2 start --name=hupdog yarn -- start"
+	},
+	"dependencies": {
+		"babel-plugin-module-resolver": "^4.1.0",
+		"next": "12.2.5",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"styled-components": "^5.3.5"
+	},
+	"devDependencies": {
+		"babel-plugin-styled-components": "^2.0.7",
+		"eslint": "8.23.0",
+		"eslint-config-next": "12.2.5",
+		"pm2": "^5.2.0"
+	}
 }
