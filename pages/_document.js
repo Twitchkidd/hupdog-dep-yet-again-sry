@@ -51,6 +51,10 @@ export default class MyDocument extends Document {
 						type='font/ttf'
 						crossOrigin='anonymous'
 					/>
+					<script
+						defer
+						data-domain='hupdog.com'
+						src='https://plausible.io/js/plausible.js'></script>
 				</Head>
 				<body>
 					<Main />
